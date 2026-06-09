@@ -64,7 +64,7 @@ function aggregiereRisiko(
 // Demo
 // ---------------------------------------------------------------------------
 
-// Demo-Daten: vereinfachte Illustration — NICHT der echte Datensatz (siehe ../data/suppliers.json).
+// Demo-Daten: vereinfachte Illustration, NICHT der echte Datensatz (siehe ../data/suppliers.json).
 const gewichtung: Gewichtung = {
   geopolitik_governance: 0.45,
   sanktions_exposure: 0.35,

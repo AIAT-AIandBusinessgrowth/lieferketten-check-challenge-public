@@ -1,6 +1,6 @@
-# Seed-Dataset — Felder & Hinweise
+# Seed-Dataset: Felder & Hinweise
 
-> ⚠️ **Das Dataset ist synthetisch und vereinfacht (Stand 2026-06) und keine offizielle AI:AT-Position.** Die Lieferanten sind frei erfunden. Die je Land hinterlegten Risiko-Dimensionen sind an echte Worldwide-Governance-Indicators-Werte (World Bank, WGI 2023) angelehnt und vereinfacht — sie sind kein Audit-Ergebnis und keine Aussage über reale Unternehmen oder Länder. Das Ergebnis des Agents ist ein **First-Pass-Screening**, keine rechts- oder compliance-sichere CSDDD-Auskunft. Kein Domänenwissen nötig — die Felder unten verstehst du ohne Vorwissen. Behandle die Zahlen als Spielmaterial, nicht als Compliance-Daten.
+> ⚠️ Das Dataset ist synthetisch und vereinfacht (Stand 2026-06) und keine offizielle AI:AT-Position. Die Lieferanten sind frei erfunden. Die je Land hinterlegten Risiko-Dimensionen sind an echte Worldwide-Governance-Indicators-Werte (World Bank, WGI 2023) angelehnt und vereinfacht; sie sind kein Audit-Ergebnis und keine Aussage über reale Unternehmen oder Länder. Das Ergebnis des Agents ist ein First-Pass-Screening, keine rechts- oder compliance-sichere CSDDD-Auskunft. Kein Domänenwissen nötig: die Felder unten verstehst du ohne Vorwissen. Behandle die Zahlen als Spielmaterial, nicht als Compliance-Daten.
 
 ## `suppliers.json` / `suppliers.csv` (Lieferantenliste)
 
@@ -22,28 +22,28 @@
 | `risiko_dimensionen.sanktions_exposure` | number | 0–100, **hoch = mehr Risiko** |
 | `risiko_dimensionen.handels_exposure` | number | 0–100, **hoch = mehr Risiko** |
 
-> **Skalen-Hinweis:** Alle drei Risiko-Dimensionen sind auf **0–100, hoch = mehr Risiko** normalisiert. Die Werte für `geopolitik_governance` orientieren sich an invertierten Worldwide-Governance-Indicators (World Bank, WGI 2023) — hoch bedeutet schlechtere Governance = mehr Risiko.
+> **Skalen-Hinweis:** Alle drei Risiko-Dimensionen sind auf 0–100 normalisiert, hoch = mehr Risiko. Die Werte für `geopolitik_governance` orientieren sich an invertierten Worldwide-Governance-Indicators (World Bank, WGI 2023): hoch bedeutet schlechtere Governance und damit mehr Risiko.
 
-**Überblick über die Lieferanten:** 28 Einträge aus 12 Ländern (AT, DE, IT, PL, TR, CN, IN, VN, BD, RU, MY, BR) mit kontrastierenden Risiko-Profilen — von niedrig (Westeuropa) über mittel (Südostasien, Indien) bis hoch (Russland).
+**Überblick über die Lieferanten:** 28 Einträge aus 12 Ländern (AT, DE, IT, PL, TR, CN, IN, VN, BD, RU, MY, BR) mit kontrastierenden Risiko-Profilen, von niedrig (Westeuropa) über mittel (Südostasien, Indien) bis hoch (Russland).
 
-`suppliers.json` trägt in jedem Eintrag ein `_hinweis`-Feld mit dem Synthetik-Vermerk. *(Die `suppliers.csv` führt den Hinweis ebenfalls je Zeile — der Disclaimer steht zusätzlich hier im README.)*
+`suppliers.json` trägt in jedem Eintrag ein `_hinweis`-Feld mit dem Synthetik-Vermerk. *(Die `suppliers.csv` führt den Hinweis ebenfalls je Zeile; der Disclaimer steht zusätzlich hier im README.)*
 
 ## `examples/` (Beispiel-Lieferanten-Profile)
 
-Drei Beispiel-Profile aus dem Dataset als eigenständige JSON-Dateien — Ausgangspunkt für deine Arbeit:
+Drei Beispiel-Profile aus dem Dataset als eigenständige JSON-Dateien, Ausgangspunkt für deine Arbeit:
 
-- `profil_LF-001.json` — niedriges Risiko (Österreich, Metallverarbeitung)
-- `profil_LF-013.json` — mittleres Risiko (China, Elektronik)
-- `profil_LF-024.json` — hohes Risiko (Russland, Metallverarbeitung)
+- `profil_LF-001.json`: niedriges Risiko (Österreich, Metallverarbeitung)
+- `profil_LF-013.json`: mittleres Risiko (China, Elektronik)
+- `profil_LF-024.json`: hohes Risiko (Russland, Metallverarbeitung)
 
 Die drei Profile sind bewusst kontrastierend gewählt, damit sie das volle Risiko-Spektrum des Datensatzes repräsentieren.
 
 ## Echte Datenquellen (optionaler Live-Pfad, Dev-Stretch)
 
-Wer den Live-Pfad bauen möchte, kann folgende offene APIs nutzen — **kein API-Key erforderlich** auf den genutzten Pfaden:
+Wer den Live-Pfad bauen möchte, kann folgende offene APIs nutzen; auf den genutzten Pfaden ist kein API-Key erforderlich:
 
-- **World Bank WGI** — `api.worldbank.org/v2` (Governance-Indikator als Proxy)
-- **UN Comtrade Preview** — `comtradeapi.un.org/public/v1/preview` (Handels-Exposition, M49-Codes)
-- **EU Consolidated Sanctions List** — `webgate.ec.europa.eu/fsd/fsf` (Sanktions-Screening)
+- **World Bank WGI:** `api.worldbank.org/v2` (Governance-Indikator als Proxy)
+- **UN Comtrade Preview:** `comtradeapi.un.org/public/v1/preview` (Handels-Exposition, M49-Codes)
+- **EU Consolidated Sanctions List:** `webgate.ec.europa.eu/fsd/fsf` (Sanktions-Screening)
 
-Das ist ein optionaler Stretch — der mitgelieferte Seed reicht für die Aufgabe vollständig aus.
+Das ist ein optionaler Stretch; der mitgelieferte Seed reicht für die Aufgabe vollständig aus.
